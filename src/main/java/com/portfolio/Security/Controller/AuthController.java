@@ -58,9 +58,7 @@ public class AuthController {
         if (userService.existsByEmail(newUser.getEmail())) {
             return new ResponseEntity<Message>(new Message("Ye existe el email ingresado"), HttpStatus.BAD_REQUEST);
         }
-        if (userService.getAll().size() > 15) {
-            return new ResponseEntity<Message>(new Message("No es posible crear más usuarios momentaneamente, puede intentarlo de nuevo en 24 horas."), HttpStatus.BAD_REQUEST);
-        }
+
         try {
             PersonUser personUser = new PersonUser(newUser.getName(), newUser.getUsername(), newUser.getEmail(), passwordEncoder.encode(newUser.getPassword()));
 
@@ -76,7 +74,7 @@ public class AuthController {
 
         } catch (Exception e) {
             System.out.println("Aqui se ve el error: " + e);
-            return new ResponseEntity<Message>(new Message("Usuario NO guardado"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<Message>(new Message("Usuario NO guardado" + e), HttpStatus.BAD_REQUEST);
         }
 
     }
