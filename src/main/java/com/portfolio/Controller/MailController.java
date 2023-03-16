@@ -2,7 +2,7 @@ package com.portfolio.Controller;
 
 import com.portfolio.Dto.DtoMail;
 import com.portfolio.Security.Controller.Message;
-import com.portfolio.Service.SMailer;
+import com.portfolio.Service.SMail;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MailController {
 
     @Autowired
-    SMailer sMailer;
+    SMail sMailer;
 
     @PostMapping("/sendMail")
     public ResponseEntity<Message> sendingMail(@RequestBody DtoMail dtoMail) {
@@ -33,4 +33,5 @@ public class MailController {
             return new ResponseEntity<Message>(new Message("Ocurrió un problema, por favor intente más tarde. Error: " + e), HttpStatus.BAD_REQUEST);
         }
     }
+
 }
