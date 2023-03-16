@@ -33,6 +33,7 @@ com\portfolio\Service\SMailer.class
 com\portfolio\Security\Entity\Rol.class
 com\portfolio\Security\jwt\JwtTokenFilter.class
 com\portfolio\Dto\DtoHardSkills.class
+com\portfolio\CorsConfig.class
 com\portfolio\Repository\RHardSkill.class
 com\portfolio\Security\Controller\Message.class
 com\portfolio\Entity\User.class
