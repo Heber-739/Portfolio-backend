@@ -2,6 +2,7 @@ com\portfolio\Security\Enums\RolName.class
 com\portfolio\Controller\WorkExpController.class
 com\portfolio\Repository\RWorkExperience.class
 com\portfolio\Security\Repository\IUserServiceRepository.class
+com\portfolio\WebConfig.class
 com\portfolio\Controller\EducationController.class
 com\portfolio\Security\jwt\JwtEntryPoint.class
 com\portfolio\Security\MainSecurity.class
