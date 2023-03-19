@@ -12,6 +12,7 @@ com\portfolio\Security\Controller\AuthController.class
 com\portfolio\Security\jwt\JwtProvider.class
 com\portfolio\Security\Dto\NewUser.class
 com\portfolio\Dto\DtoTag.class
+com\portfolio\Service\SMail.class
 com\portfolio\Controller\SoftSkillController.class
 com\portfolio\Entity\Education.class
 com\portfolio\Entity\WorkExperience.class
